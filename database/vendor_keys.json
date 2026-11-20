@@ -1,0 +1,150 @@
+[
+  {
+    "vendor_name": "TallyBridge Connect (LedgerOne ERP)",
+    "vendor_id": "tallybridge",
+    "hashed_api_key": "2173ac3819ccac94d6a853e7f658b7c98fcb765a1c43fcec1a3e8fbfee68d049",
+    "description": "Identity contract for TallyBridge Connect (LedgerOne ERP)",
+    "scopes": [
+      "invoices:read",
+      "shipments:read"
+    ],
+    "allowed_ips": [
+      "10.20.4.0/24",
+      "127.0.0.1"
+    ],
+    "allowed_hosts": [],
+    "expires_at": "2027-06-12T00:00:00",
+    "is_active": true,
+    "created_at": "2026-11-19T23:31:59.801083+00:00"
+  },
+  {
+    "vendor_name": "Swift Global Freight (Customer Portal)",
+    "vendor_id": "swift-carrier",
+    "hashed_api_key": "5aabc185137b514d8c779b9a6ee5b96327ce5380c73c071d6939434877b6b007",
+    "description": "Identity contract for Swift Global Freight (Customer Portal)",
+    "scopes": [
+      "suppliers:read",
+      "shipments:read",
+      "shipments:write",
+      "invoices:read"
+    ],
+    "allowed_ips": [
+      "192.168.1.0/24",
+      "10.0.0.0/16",
+      "127.0.0.1",
+      "172.16.0.0/16"
+    ],
+    "allowed_hosts": [],
+    "expires_at": "2027-12-31T23:59:59",
+    "is_active": true,
+    "created_at": "2026-11-19T23:31:59.801119+00:00"
+  },
+  {
+    "vendor_name": "TallyBridge Connect (Legacy Unreviewed)",
+    "vendor_id": "tallybridge",
+    "hashed_api_key": "ae4588f6cdb790ecfcfce759d73f4a64004b3a9feb6d3f8e4e05babf6127672c",
+    "description": "Identity contract for TallyBridge Connect (Legacy Unreviewed)",
+    "scopes": [
+      "invoices:read"
+    ],
+    "allowed_ips": [
+      "10.20.4.0/24",
+      "127.0.0.1"
+    ],
+    "allowed_hosts": [],
+    "expires_at": "2027-01-01T00:00:00",
+    "is_active": true,
+    "created_at": "2026-11-19T23:31:59.801138+00:00"
+  },
+  {
+    "vendor_name": "Nightly Backup Agent",
+    "vendor_id": "internal-backup",
+    "hashed_api_key": "e3792ccf9a4961e9590bc19473fac0386b26d0988b4ccf9cd6bcef1704beedbd",
+    "description": "Identity contract for Nightly Backup Agent",
+    "scopes": [
+      "records:read",
+      "backup:read"
+    ],
+    "allowed_ips": [
+      "172.16.0.0/16",
+      "127.0.0.1"
+    ],
+    "allowed_hosts": [],
+    "expires_at": "2027-02-01T00:00:00",
+    "is_active": true,
+    "created_at": "2026-11-19T23:31:59.801152+00:00"
+  },
+  {
+    "vendor_name": "TallyBridge HelpDeskr Sync Service",
+    "vendor_id": "tallybridge",
+    "hashed_api_key": "6a9bfa37625f433276d145db03bf25c8924d0830af85ee808445d0f164d72eb8",
+    "description": "Identity contract for TallyBridge HelpDeskr Sync Service",
+    "scopes": [
+      "tickets:read"
+    ],
+    "allowed_ips": [
+      "10.20.4.0/24",
+      "127.0.0.1"
+    ],
+    "allowed_hosts": [],
+    "expires_at": "2027-06-12T00:00:00",
+    "is_active": true,
+    "created_at": "2026-11-19T23:31:59.801166+00:00"
+  },
+  {
+    "vendor_name": "Internal Payments Console",
+    "vendor_id": "finance-console",
+    "hashed_api_key": "504cc058346d0c683707ff845e929b2ce18915d13e4168d965650a3193b5a59e",
+    "description": "Identity contract for Internal Payments Console",
+    "scopes": [
+      "payments:read",
+      "payments:write",
+      "suppliers:payout_update"
+    ],
+    "allowed_ips": [
+      "172.16.8.0/24",
+      "127.0.0.1"
+    ],
+    "allowed_hosts": [],
+    "expires_at": "2027-10-17T00:00:00",
+    "is_active": true,
+    "created_at": "2026-11-19T23:31:59.801179+00:00"
+  },
+  {
+    "vendor_name": "Executive BI & Reporting Service",
+    "vendor_id": "reporting-service",
+    "hashed_api_key": "29058fdafebe635d230ded063521c30b0c9706deaaac29e7980e976241bdc898",
+    "description": "Identity contract for Executive BI & Reporting Service",
+    "scopes": [
+      "invoices:read",
+      "shipments:read",
+      "reports:read"
+    ],
+    "allowed_ips": [
+      "172.16.9.0/24",
+      "127.0.0.1"
+    ],
+    "allowed_hosts": [],
+    "expires_at": "2027-06-30T23:59:59",
+    "is_active": true,
+    "created_at": "2026-11-19T23:31:59.801190+00:00"
+  },
+  {
+    "vendor_name": "BlueVault Document Portal",
+    "vendor_id": "bluevault-partner",
+    "hashed_api_key": "6944e9cdd01a77d1297bad0ac0bddff83f7b7a76cd51870d4d4b9000b880e3e0",
+    "description": "Identity contract for BlueVault Document Portal",
+    "scopes": [
+      "documents:read",
+      "manifests:read"
+    ],
+    "allowed_ips": [
+      "172.16.0.0/16",
+      "127.0.0.1"
+    ],
+    "allowed_hosts": [],
+    "expires_at": "2027-02-18T00:00:00",
+    "is_active": true,
+    "created_at": "2026-11-19T23:31:59.801201+00:00"
+  }
+]
