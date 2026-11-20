@@ -33,7 +33,9 @@ def run_upstream(host="127.0.0.1", port=8000):
     uvicorn.run(upstream_app, host=host, port=port, log_level="warning")
 
 def run_proxy(host="0.0.0.0", port=8080):
-    from proxy import app as proxy_app
+    import logging
+    from proxy import ConsolePollingFilter, app as proxy_app
+    logging.getLogger("uvicorn.access").addFilter(ConsolePollingFilter())
     print(f"Starting VaultGate proxy on http://{host}:{port}")
     display_host = "localhost" if host == "0.0.0.0" else host
     print(f"Console available at http://{display_host}:{port}/vaultgate/console")

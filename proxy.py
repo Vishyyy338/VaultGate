@@ -2,7 +2,9 @@
 VaultGate reverse proxy implementation with operator access controls.
 """
 import asyncio
+from contextlib import asynccontextmanager
 import hmac
+import logging
 import os
 import time
 from typing import Any, Dict, Optional
@@ -28,10 +30,32 @@ audit_mgr = AuditManager(log_dir="logs", rotation_minutes=30)
 pending_signals: Dict[str, asyncio.Event] = {}
 pending_verdicts: Dict[str, Dict[str, Any]] = {}
 
+
+class ConsolePollingFilter(logging.Filter):
+    def filter(self, record: logging.LogRecord) -> bool:
+        msg = record.getMessage()
+        return not any(
+            route in msg for route in (
+                "/vaultgate/api/audit",
+                "/vaultgate/api/holds",
+                "/vaultgate/api/mode",
+                "/vaultgate/api/posture",
+                "/favicon.ico"
+            )
+        )
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    logging.getLogger("uvicorn.access").addFilter(ConsolePollingFilter())
+    yield
+
+
 app = FastAPI(
     title="VaultGate Security Proxy",
     description="Reverse proxy gateway with operator clearance controls.",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 
