@@ -69,11 +69,31 @@ VaultGate supports dual operational modes configurable on the fly via the consol
 
 ## Quick Start & Deployment
 
+##### *Use `python`, `py`, or `python3`, whichever is available.*
+
 ### 1. Prerequisites & Environment Setup
 Clone the repository and install runtime dependencies:
 ```bash
 python3 -m venv venv
+```
+
+**Linux / macOS:**
+```bash
 source venv/bin/activate
+```
+
+**Windows (cmd):**
+```bat
+venv\Scripts\activate
+```
+
+**Windows (PowerShell):**
+```powershell
+venv\Scripts\Activate.ps1
+```
+
+Then install dependencies:
+```bash
 pip install -r requirements.txt
 ```
 
